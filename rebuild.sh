@@ -9,7 +9,7 @@ docker run -d \
   --link hooks \
   --link poxa \
   -p 443:443 \
-  -v /etc/waffle/nginx/certs:/etc/nginx/certs:ro \
+  -v /Users/ahomeyer/Desktop/waffle-takeout/waffleio-takeout/etc/waffle/nginx/certs/:/etc/nginx/certs \
   waffleio/takeout-nginx && \
 sleep 2 && \
 docker ps && \
