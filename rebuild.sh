@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 docker rm -f nginx && \
-docker build --tag "waffleio/takeout-nginx" . && \
+docker build --tag "waffleio/takeout-nginx" /code/takeout-nginx && \
 docker run -d \
   --name nginx \
   --link app \
@@ -13,5 +13,5 @@ docker run -d \
   waffleio/takeout-nginx && \
 sleep 2 && \
 docker ps && \
-# docker exec -it nginx cat /etc/nginx/nginx.conf && \
+# docker exec -it nginx cat /etc/hosts && \
 docker logs -f nginx
