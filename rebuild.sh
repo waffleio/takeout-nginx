@@ -8,7 +8,6 @@ docker run -d \
   --link waffle-api \
   --link waffle-hooks \
   --link waffle-poxa \
-  --link waffle-rally-integration \
   --link waffle-hedwig \
   -p 443:443 \
   -v /Users/ahomeyer/Desktop/waffleio-takeout/etc/waffle/nginx/certs/:/etc/nginx/certs \
