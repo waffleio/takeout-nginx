@@ -2,7 +2,6 @@ docker rm -f waffle-app
 docker rm -f waffle-api
 docker rm -f waffle-hooks
 docker rm -f waffle-hedwig
-docker rm -f waffle-rally-integration
 docker rm -f waffle-poxa
 
 docker run \
@@ -32,13 +31,6 @@ docker run \
   --env-file /Users/ahomeyer/Desktop/waffleio-takeout/etc/waffle/environment.list \
   -v /Users/ahomeyer/Desktop/waffleio-takeout/etc/waffle/ca-certificates:/etc/waffle/ca-certificates:ro \
   quay.io/waffleio/hedwig
-
-docker run \
-  -d \
-  --name waffle-rally-integration \
-  --env-file /Users/ahomeyer/Desktop/waffleio-takeout/etc/waffle/environment.list \
-  -v /Users/ahomeyer/Desktop/waffleio-takeout/etc/waffle/ca-certificates:/etc/waffle/ca-certificates:ro \
-  quay.io/waffleio/waffle.io-rally-integration
 
 docker run \
   -d \
